@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CJAEG - Goldbach Twin Decomposition</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Goldbach Twin Decomposition – CJAEG</h1>
+    <p>Enter an even number <strong>E</strong> to find a pair of primes <strong>(p, q)</strong> such that <br>
+    <code>E = p + q</code> with <code>p = A ± s</code> and <code>q = B ∓ s</code> for a partition <code>E = A + B</code>, where at least one prime is part of a twin pair.</p>
+  </header>
+
+  <main>
+    <label for="evenNumber">Enter a large even number E:</label><br>
+    <input type="text" id="evenNumber" placeholder="Example: 10000000000000000000000000000000"><br><br>
+    <button onclick="findCJAEGPair()">Find Twin-Based Pair</button>
+
+    <div id="result" class="result-block"></div>
+  </main>
+
+  <footer>
+    <p>Conjecture CJAEG by Bahbouhi Bouchaib – 2025 | <a href="about.html">About</a> | <a href="rapport.html">Method</a></p>
+  </footer>
+</body>
+</html>
