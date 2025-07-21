@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>CJAEG - Goldbach Twin Decomposition</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CJAEG – Décomposition Goldbach par Jumeaux Anti-Équidistants</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Goldbach Twin Decomposition – CJAEG</h1>
-    <p>Enter an even number <strong>E</strong> to find a pair of primes <strong>(p, q)</strong> such that <br>
-    <code>E = p + q</code> with <code>p = A ± s</code> and <code>q = B ∓ s</code> for a partition <code>E = A + B</code>, where at least one prime is part of a twin pair.</p>
+    <h1>CJAEG – Décomposition de Goldbach</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="about.html">À propos</a> |
+      <a href="rapport.html">Rapport</a>
+    </nav>
   </header>
 
   <main>
-    <label for="evenNumber">Enter a large even number E:</label><br>
-    <input type="text" id="evenNumber" placeholder="Example: 10000000000000000000000000000000"><br><br>
-    <button onclick="findCJAEGPair()">Find Twin-Based Pair</button>
+    <p>Entrez un nombre pair ≥ 4 pour trouver une paire de nombres premiers (p, q) telle que :</p>
+    <p><strong>E = p + q</strong>, selon la méthode des jumeaux anti-équidistants (CJAEG).</p>
 
-    <div id="result" class="result-block"></div>
+    <input type="text" id="inputNumber" placeholder="Exemple : 100" />
+    <button onclick="decomposer()">Décomposer en (p, q)</button>
+
+    <div id="resultat"></div>
   </main>
 
   <footer>
-    <p>Conjecture CJAEG by Bahbouhi Bouchaib – 2025 | <a href="about.html">About</a> | <a href="rapport.html">Method</a></p>
+    <p>© Bahbouhi Bouchaib – Méthode CJAEG – 2025</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
