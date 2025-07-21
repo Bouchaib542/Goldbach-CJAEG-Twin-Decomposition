@@ -1,73 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Scientific Report – CJAEG</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rapport – CJAEG</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Scientific Report: CJAEG Method</h1>
+    <h1>Rapport scientifique – CJAEG</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="about.html">À propos</a> |
+      <a href="rapport.html">Rapport</a>
+    </nav>
   </header>
 
   <main>
-    <h2>1. Principle</h2>
-    <p>
-      The CJAEG method (Conjecture des Jumeaux Anti-Équidistants de Goldbach) proposes that for any even number E ≥ 4,
-      there exists at least one pair of primes (p, q) such that:
-    </p>
-
+    <h2>Principe de la méthode CJAEG</h2>
+    <p>Pour tout nombre pair E ≥ 4, on cherche une partition E = A + B telle que :</p>
     <ul>
-      <li>E = A + B (partition of E into two integers A and B)</li>
-      <li>There exists an integer s such that: p = A − s and q = B + s, or p = A + s and q = B − s</li>
-      <li>At least one of p or q belongs to a twin prime pair (i.e., p ± 2 or q ± 2 is also prime)</li>
+      <li><strong>(A − s, B + s)</strong> ou <strong>(A + s, B − s)</strong> soient tous deux premiers ;</li>
+      <li>au moins un des deux appartienne à une <strong>paire de jumeaux</strong>.</li>
     </ul>
 
-    <p>
-      This structure is said to be <strong>anti-equidistant</strong>: the prime numbers are not centered around E/2,
-      but around two separate integers A and B that form a partition of E.
-    </p>
+    <h2>Objectif</h2>
+    <p>Démontrer que, pour tout E pair, une telle décomposition existe toujours, même pour des valeurs extrêmes (ex. 10<sup>1000</sup>).</p>
 
-    <h2>2. Motivation</h2>
-    <p>
-      Unlike traditional methods which often search symmetrically around E/2, CJAEG relies on asymmetric exploration
-      of partitions of E. This can reveal deeper regularities in the distribution of primes—particularly in their tendency
-      to form twin pairs across anti-symmetric positions.
-    </p>
+    <h2>Résultats</h2>
+    <ul>
+      <li>Tests effectués jusqu’à 10<sup>9</sup> sans échec.</li>
+      <li>Premiers tests positifs pour 10<sup>50</sup> et 10<sup>1000</sup> (s détecté rapidement).</li>
+      <li>La méthode s’avère plus rapide que la recherche classique autour de E/2.</li>
+    </ul>
 
-    <h2>3. Empirical Observations</h2>
-    <p>
-      Extensive tests up to E = 10⁹ have shown that such decompositions exist, and that the shift s needed is typically
-      much smaller than the symmetric t used in GPS-like methods. This suggests a more efficient predictive route.
-    </p>
-
-    <p><strong>Example:</strong><br>
-      For E = 100:<br>
-      Partition A = 30, B = 70 → with s = 13 → A − s = 17, B + s = 83 → both primes.<br>
-      And (17, 19) form a twin pair.
-    </p>
-
-    <h2>4. Current Conjecture</h2>
-    <p>
-      <strong>CJAEG Conjecture (Bahbouhi, 2025):</strong><br>
-      For any even number E ≥ 4, there exists a partition E = A + B and a positive integer s such that:
-      <ul>
-        <li>p = A − s and q = B + s are both prime, or</li>
-        <li>p = A + s and q = B − s are both prime</li>
-        <li>And at least one of (p, q) is part of a twin prime pair</li>
-      </ul>
-    </p>
-
-    <h2>5. Implications</h2>
-    <p>
-      This method opens a new path toward understanding the structure of primes involved in Goldbach’s Conjecture.
-      It provides an alternative mechanism—centered on partition dynamics and twin primes—to validate the decomposition
-      of even numbers at massive scales.
-    </p>
+    <h2>Perspectives</h2>
+    <p>La méthode CJAEG pourrait permettre une reformulation plus constructive de la conjecture de Goldbach, notamment via une réduction à des cas de jumeaux, très étudiés par ailleurs.</p>
   </main>
 
   <footer>
-    <p>© 2025 Bahbouhi Bouchaib | <a href="index.html">Home</a> | <a href="about.html">About</a></p>
+    <p>© Bahbouhi Bouchaib – Méthode CJAEG – 2025</p>
   </footer>
 </body>
 </html>
